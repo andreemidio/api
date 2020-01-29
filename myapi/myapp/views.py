@@ -1,9 +1,11 @@
 from rest_framework import generics
-from .models import Music
-from .serializers import MusicSerializer
+from .models import Documentos
+from .serializers import DocumentosSerializer
 
 # Create your views here.
-class MusicList(generics.ListCreateAPIView):
 
-    queryset = Music.objects.all()
-    serializer_class = MusicSerializer
+
+class DocumentList(generics.ListCreateAPIView):
+
+    queryset = Documentos.objects.all()
+    serializer_class = DocumentosSerializer

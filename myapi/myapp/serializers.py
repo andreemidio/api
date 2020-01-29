@@ -1,9 +1,8 @@
 from rest_framework import serializers
-from .models import Music
+from .models import Documentos
 
-class MusicSerializer(serializers.ModelSerializer):
+class DocumentosSerializer(serializers.ModelSerializer):
 
     class Meta:
-
-        model = Music
-        fields = '__all__'
+        model =  Documentos
+        fields  = '__all__'
