@@ -1,8 +1,14 @@
 from rest_framework import serializers
-from .models import Documentos
+from .models import Documentos, LogConsulta
+
 
 class DocumentosSerializer(serializers.ModelSerializer):
-
     class Meta:
-        model =  Documentos
-        fields  = '__all__'
+        modeL = Documentos
+        fields = '__all__'
+
+
+class LogConsultaSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = LogConsulta
+        fields = '__all__'

@@ -81,6 +81,9 @@ class UserAPIKey(AbstractAPIKey):
         verbose_name = "Usuario API key"
         verbose_name_plural = "Usuarios API keys"
 
+    def __str__(self):
+        return self.organization
+
 class Documentos(models.Model):
     cpf_ou_cnpj = models.CharField(max_length=255, null=False, blank=True)
     celular = models.CharField(max_length=255, null=False, blank=True)
@@ -109,7 +112,10 @@ class Consultas(models.Model):
 
     class Meta:
         verbose_name =  'Consultas'
-
+    def __str__(self):
+        return  self.data, \
+                self.usuarioID,\
+                self.documentoID
 
 class LogConsulta(models.Model):
     data_consulta = models.DateTimeField(null=False, blank=True)
